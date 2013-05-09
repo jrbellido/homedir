@@ -1,0 +1,12 @@
+#!/bin/bash
+
+alias ls='ls --color'
+alias l='ls -l'
+alias ll='ls -la'
+
+alias ds='du -hs'
+alias mkdir='mkdir -pv'
+
+if [ $UID -ne 0 ]; then
+    alias reboot='sudo reboot'
+fi

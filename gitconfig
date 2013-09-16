@@ -32,3 +32,9 @@
 	default = tracking
 [merge]
 	stat = true
+[giggle]
+	main-window-maximized = false
+	main-window-geometry = 1098x814+224+97
+	main-window-view = FileView
+	history-view-vpane-position = 368
+	file-view-vpane-position = 323

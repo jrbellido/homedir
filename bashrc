@@ -10,3 +10,9 @@ if [ -f ~/.homedir/aliases ]; then
     source ~/.homedir/aliases
 fi
 
+# virtualenvwrapper
+if [ -d ~/.virtualenvs ]; then
+    export WORKON_HOME=$HOME/.virtualenvs
+    export PROJECT_HOME=$HOME/workspace
+    source /usr/local/bin/virtualenvwrapper.sh
+fi

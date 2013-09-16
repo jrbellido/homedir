@@ -7,6 +7,8 @@ alias ll='ls -la'
 alias ds='du -hs'
 alias mkdir='mkdir -pv'
 
+alias rm.backup="find . -name '*~' -exec rm -vf '{}' +"
+
 if [ $UID -ne 0 ]; then
     alias reboot='sudo reboot'
 fi

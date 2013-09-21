@@ -16,3 +16,8 @@ if [ -d ~/.virtualenvs ]; then
     export PROJECT_HOME=$HOME/workspace
     source /usr/local/bin/virtualenvwrapper.sh
 fi
+
+# golang
+export GOROOT=$HOME/go
+export PATH=$PATH:$GOROOT/bin
+

@@ -9,4 +9,5 @@ Icon
 .LSOverride
 .AppleDouble
 *.pyc
-
+*~
+build/

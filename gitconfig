@@ -8,6 +8,7 @@
 	ri = rebase --interactive --autosquash
 	rv = remote -v
 	st = status -s -u
+	stg = status -uno
 	who = shortlog -s --
 [user]
 	name = Joan R. Bellido

@@ -24,8 +24,6 @@
 [advice]
 	statusHints = false
 [diff]
-	renames = copies
-	mnemonicprefix = true
 [branch]
 	autosetupmerge = true
 [push]

@@ -7,8 +7,31 @@ alias ll='ls -la'
 alias ds='du -hs'
 alias mkdir='mkdir -pv'
 
+## Remove backup files (*~) recursively ##
 alias rm.backup="find . -name '*~' -exec rm -vf '{}' +"
 
+## Video transcoding for Sony Bravia ##
+alias transcode="sh $HOME/.homedir/script/transcode.sh"
+
+## SU required commands ##
 if [ $UID -ne 0 ]; then
-    alias reboot='sudo reboot'
+	alias reboot='sudo reboot'
+	alias apt-get='sudo apt-get'
+	alias iptraf='sudo iptraf'
 fi
+
+## Memcached service ##
+alias mcdstats='/usr/bin/memcached-tool 10.10.27.11:11211 stats'
+alias mcdshow='/usr/bin/memcached-tool 10.10.27.11:11211 display'
+
+## Wget ##
+alias wget='wget -c'
+
+## Top memory consuming processes ##
+alias psmem='ps auxf | sort -nr -k 4'
+alias psmem10='ps auxf | sort -nr -k 4 | head -10'
+ 
+## Top CPU consuming processes ##
+alias pscpu='ps auxf | sort -nr -k 3'
+alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
+

@@ -14,7 +14,7 @@ alias mkdir='mkdir -pv'
 alias rm.backup="find . -name '*~' -exec rm -vf '{}' +"
 
 ## Video transcoding for Sony Bravia ##
-alias transcode="sh $HOME/.homedir/script/transcode.sh"
+alias transcode="sh $HOME/.homedir/script/transcode"
 
 ## SU required commands ##
 if [ $UID -ne 0 ]; then

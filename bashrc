@@ -23,4 +23,5 @@ export GOPATH=$HOME/go/
 export PATH=$PATH:$GOROOT/bin
 
 # custom prompt
-export PS1='\[\e[0;37m\]\u@\h\[\e[1;37m\]\[\e[1;30m\]:\[\e[1;37m\]\w\[\e[1;31m\]$(__git_ps1 "[%s]")\[\e[1;37m\]\$ '
+source ~/.homedir/script/git_prompt
+export PS1='\[\e[0;37m\]\u@\h\[\e[1;37m\]\[\e[1;30m\]:\[\e[1;37m\]\w\[\e[1;31m\]$(__git_ps1 "[%s]")\[\e[1;37m\]\$\[\e[0m\] '

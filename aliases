@@ -12,9 +12,7 @@ alias mkdir='mkdir -pv'
 
 ## Remove backup files (*~) recursively ##
 alias rm.backup="find . -name '*~' -exec rm -vf '{}' +"
-
-## Video transcoding for Sony Bravia ##
-alias transcode="sh $HOME/.homedir/script/transcode"
+alias rm.osx="find . -name '.DS*' -or -name '._.DS*' -exec rm -vf '{}' +"
 
 ## SU required commands ##
 if [ $UID -ne 0 ]; then

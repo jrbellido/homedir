@@ -30,9 +30,15 @@ if ! shopt -oq posix; then
 	fi
 fi
 
+# spanish/русский keyboard layout for X
+if [ "$DISPLAY" ]; then
+	setxkbmap -layout "es,ru(phonetic)" -option "grp:alt_shift_toggle"
+fi
+
 # golang
-export GOROOT=$HOME/go
-export GOPATH=$HOME/go/
+export GOROOT="/usr/lib/go"
+export GOPATH="/home/jr/workspace/go"
+export GOOS="linux"
 export PATH=$PATH:$GOROOT/bin
 
 # custom prompt

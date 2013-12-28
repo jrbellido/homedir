@@ -1,9 +1,5 @@
 #!/bin/bash
 
-if [ ! `uname` == "Darwin" ]; then
-    alias ls='ls --color'
-fi
-
 alias l='ls -l'
 alias ll='ls -la'
 
@@ -13,6 +9,10 @@ alias mkdir='mkdir -pv'
 ## Remove backup files (*~) recursively ##
 alias rm.backup="find . -name '*~' -exec rm -vf '{}' +"
 alias rm.osx="find . -name '.DS*' -or -name '._.DS*' -exec rm -vf '{}' +"
+
+## OS X
+alias finder.show_all_files_true="defaults write com.apple.finder AppleShowAllFiles -boolean true && killall Finder"
+alias finder.show_all_files_false="defaults delete com.apple.finder AppleShowAllFiles && killall Finder"
 
 ## SU required commands ##
 if [ $UID -ne 0 ]; then

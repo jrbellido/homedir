@@ -62,5 +62,11 @@ if [ -f ~/.rvm/scripts/rvm ]; then
 	source ~/.rvm/scripts/rvm
 fi
 
+# Work place specific
+if [ "$HOSTNAME" == "PCHOFF6PJF02" ]; then
+	export http_proxy=http://proxy1.services.gfc:3128
+	export https_proxy=$http_proxy
+fi
+
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 

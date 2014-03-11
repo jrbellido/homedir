@@ -51,16 +51,16 @@ export PS1='\[\e[0;37m\]\u@\h\[\e[1;37m\]\[\e[1;30m\]:\[\e[1;37m\]\w\[\e[1;31m\]
 # add custom scripts to PATH
 export PATH=~/.homedir/script/:/opt/local/bin:$PATH
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
 # Mac OS X specific
 if [ "$(uname)" == "Darwin" ]; then
 	alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 	export EDITOR='subl -w'
 fi
 
+# Ruby RVM
 if [ -f ~/.rvm/scripts/rvm ]; then
-	source /Users/jr/.rvm/scripts/rvm
+	source ~/.rvm/scripts/rvm
 fi
 
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 

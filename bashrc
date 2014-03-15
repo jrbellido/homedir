@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# For GNU core utils support in OSX:
-# > sudo port install coreutils
-if [ -d /opt/local/libexec/gnubin/ ]; then
-	export PATH=/opt/local/libexec/gnubin/:$PATH
-fi
-
 if [ -f ~/.homedir/aliases ]; then
 	source ~/.homedir/aliases
 fi
@@ -19,6 +13,11 @@ if [ -d ~/.virtualenvs ]; then
 	export WORKON_HOME=$HOME/.virtualenvs
 	export PROJECT_HOME=$HOME/workspace
 	source /usr/local/bin/virtualenvwrapper.sh
+fi
+
+# rvm
+if [ -f ~/.rvm/scripts/rvm ]; then
+	source ~/.rvm/scripts/rvm
 fi
 
 # enable bash completion in interactive shells
@@ -35,21 +34,15 @@ if [ "$DISPLAY" ]; then
 	setxkbmap -layout "es,ru(phonetic)" -option "grp:alt_shift_toggle"
 fi
 
-# golang
-export GOROOT="/usr/lib/go"
-export GOPATH="/home/jr/workspace/go"
-export GOOS="linux"
-export PATH=$PATH:$GOROOT/bin
-
 # jekyllrb
-export RUBYOPT="-KU -E utf-8:utf-8"
+#export RUBYOPT="-KU -E utf-8:utf-8"
 
 # custom prompt
 source ~/.homedir/script/git_prompt
 export PS1='\[\e[0;37m\]\u@\h\[\e[1;37m\]\[\e[1;30m\]:\[\e[1;37m\]\w\[\e[1;31m\]$(__git_ps1 "[%s]")\[\e[1;37m\]\$\[\e[0m\] '
 
 # add custom scripts to PATH
-export PATH=~/.homedir/script/:/opt/local/bin:$PATH
+export PATH=~/.homedir/script:$PATH
 
 # Mac OS X specific
 if [ "$(uname)" == "Darwin" ]; then
@@ -57,10 +50,8 @@ if [ "$(uname)" == "Darwin" ]; then
 	export EDITOR='subl -w'
 fi
 
-# Ruby RVM
-if [ -f ~/.rvm/scripts/rvm ]; then
-	source ~/.rvm/scripts/rvm
-fi
+# Homebrew
+echo export PATH='/usr/local/sbin:$PATH' >> ~/.bash_profile
 
 # Work place specific
 if [ "$HOSTNAME" == "PCHOFF6PJF02" ]; then

@@ -50,9 +50,6 @@ if [ "$(uname)" == "Darwin" ]; then
 	export EDITOR='subl -w'
 fi
 
-# Homebrew
-echo export PATH='/usr/local/sbin:$PATH' >> ~/.bash_profile
-
 # Work place specific
 if [ "$HOSTNAME" == "PCHOFF6PJF02" ]; then
 	export http_proxy=http://proxy1.services.gfc:3128

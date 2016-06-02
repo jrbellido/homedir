@@ -30,7 +30,7 @@ if ! shopt -oq posix; then
 fi
 
 # spanish/русский keyboard layout for X
-if [ "$DISPLAY" ]; then
+if [ "$DISPLAY" -a -f /usr/bin/setxkbmap ]; then
 	setxkbmap -layout "es,ru(phonetic)" -option "grp:alt_shift_toggle"
 fi
 

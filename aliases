@@ -4,7 +4,7 @@
 if [ "$(uname)" == "Darwin" ]; then
 	# coreutils
 	alias ls='gls --color'
-	alias du="gu"
+	alias du="gdu"
 	alias mkdir="gmkdir"
 	# Finder options
 	alias finder.show_all_files_true="defaults write com.apple.finder AppleShowAllFiles -boolean true && killall Finder"

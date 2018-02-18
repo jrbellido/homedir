@@ -56,7 +56,13 @@ if [ "$HOSTNAME" == "PCHOFF6PJF02" ]; then
 	export https_proxy=$http_proxy
 fi
 
+PATH=$PATH:$HOME/.gem/ruby/2.5.0/bin # Add Ruby Gem binaries
+
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export GOPATH=$HOME/go
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

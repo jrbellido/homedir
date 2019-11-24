@@ -38,16 +38,15 @@ fi
 #export RUBYOPT="-KU -E utf-8:utf-8"
 
 # custom prompt
-source ~/.homedir/script/git_prompt
+source ~/.homedir/scripts/git_prompt
 export PS1='\[\e[0;37m\]\u@\h\[\e[1;37m\]\[\e[1;30m\]:\[\e[1;37m\]\w\[\e[1;31m\]$(__git_ps1 "[%s]")\[\e[1;37m\]\$\[\e[0m\] '
 
 # add custom scripts to PATH
-export PATH=~/.homedir/script:$PATH
+export PATH=~/.homedir/scripts:$PATH
 
 # Mac OS X specific
 if [ "$(uname)" == "Darwin" ]; then
-	alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
-	export EDITOR='subl -w'
+	export EDITOR='vim'
 fi
 
 # Work place specific
@@ -60,3 +59,7 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export GOPATH=$HOME/go
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

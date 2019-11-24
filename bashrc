@@ -55,6 +55,8 @@ if [ "$HOSTNAME" == "PCHOFF6PJF02" ]; then
 	export https_proxy=$http_proxy
 fi
 
+PATH=$PATH:$HOME/.gem/ruby/2.5.0/bin # Add Ruby Gem binaries
+
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export GOPATH=$HOME/go

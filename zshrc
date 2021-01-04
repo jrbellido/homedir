@@ -1,6 +1,6 @@
 export PATH=$HOME/.homedir/bin:$PATH
 
-PROMPT='%n@%m:%~$(git_prompt_info)%% '
+PROMPT='%n@%m:%~$(git_prompt_info)$ '
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}[%{$fg[cyan]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"

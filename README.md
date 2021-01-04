@@ -17,3 +17,7 @@ Backup and link to new git configuration:
     $ mv .gitconfig .gitconfig.original
     $ ln -s .homedir/gitconfig .gitconfig
 
+Add this line to Zsh configuration:
+
+    source $HOME/.homedir/zshrc
+

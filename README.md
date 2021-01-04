@@ -2,8 +2,7 @@ My configuration files for GNU/Linux and macOS
 
 Requirements
 --
-* fish shell
-* coreutils (only in macOS)
+* coreutils (only for macOS)
 
 Install
 --

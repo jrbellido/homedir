@@ -21,3 +21,7 @@ Add this line to Zsh configuration:
 
     source $HOME/.homedir/zshrc
 
+Link to tmux configuration:
+
+    $ ln -s ~/.homedir/tmux.conf ~/.tmux.conf
+

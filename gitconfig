@@ -31,3 +31,5 @@
 	default = tracking
 [merge]
 	stat = true
+[pull]
+	rebase = false

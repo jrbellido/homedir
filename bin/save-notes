@@ -1,0 +1,16 @@
+#!/bin/sh
+
+REPO_NAME='notes.git'
+
+inside_git_repo="$(git rev-parse --is-inside-work-tree 2>/dev/null)"
+is_notes_repo="$(git remote -v | grep $REPO_NAME | wc -l)"
+
+if [ "$inside_git_repo" -a $is_notes_repo -gt 0 ]; then
+  echo "Auto-saving..."
+  git add .
+  git commit -a -m "auto-commit `date +"%Y-%m-%d %T"`"
+  git push
+else
+  echo "Not in repository: $REPO_NAME"
+fi
+

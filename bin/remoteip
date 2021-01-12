@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if command -v dig &> /dev/null
+then
+  dig @resolver4.opendns.com myip.opendns.com
+else
+  curl icanhazip.com
+fi
+

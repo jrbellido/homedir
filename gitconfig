@@ -21,7 +21,9 @@
 	autocrlf = input
 	safecrlf = warn
 [color]
-	ui = auto
+	ui = true
+[ui "color"]
+  ui = always
 [advice]
 	statusHints = false
 [diff]
@@ -31,5 +33,6 @@
 	default = tracking
 [merge]
 	stat = true
+  tool = nvim -d
 [pull]
 	rebase = false

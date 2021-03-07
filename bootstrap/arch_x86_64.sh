@@ -1,7 +1,10 @@
 #!/bin/sh
 
-sudo pacman -Sy \
+sudo pacman -Sy --needed \
   base-devel -R automake
+
+sudo pacman -Sy --needed \
+  git
 
 sudo pacman -Sy \
   alacritty \
@@ -22,7 +25,6 @@ sudo pacman -Sy \
   inkscape \
   iputils \
   irssi \
-  jdk11-openjdk \
   jq \
   neovim \
   restic \
@@ -47,5 +49,6 @@ sudo pacman -Sy \
   zola \
   zsh \
 
-
-# yay packages: yay, joplin, google-chrome
+# TODO: build yay from git repository and install:
+#   google-chrome
+#   joplin

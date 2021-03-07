@@ -1,5 +1,2 @@
-broot
-vim
-neovim
-zsh
+#!/bin/sh
 

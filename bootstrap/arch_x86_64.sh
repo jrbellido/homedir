@@ -4,39 +4,33 @@ sudo pacman -Sy --needed \
   base-devel -R automake
 
 sudo pacman -Sy --needed \
-  git
+  git \
+  openssl \
+
+# shells {{{1
 
 sudo pacman -Sy \
-  alacritty \
   bash \
-  bc \
-  broot  \
-  bzip2 \
-  cifs-utils \
-  darktable \
-  ffmpeg \
+  zsh \
+
+# terminals {{{1
+
+sudo pacman -Sy \
+  zfce4-terminal \
+  alacritty \
+
+# web browsers {{{1
+
+sudo pacman -Sy \
   firefox \
-  htop \
+
+# window managers {{{1
+
+sudo pacman -Sy \
   i3-gaps \
   i3blocks \
   i3lock \
   i3status \
-  inetutils \
-  inkscape \
-  iputils \
-  irssi \
-  jq \
-  neovim \
-  restic \
-  ripgrep \
-  rofi \
-  rsync \
-  thunar \
-  thunar-archive-plugin \
-  thunar-volman \
-  tmux \
-  tree \
-  wget \
   xfce4-appfinder \
   xfce4-clipman-plugin \
   xfce4-panel \
@@ -45,9 +39,41 @@ sudo pacman -Sy \
   xfce4-screenshooter \
   xfce4-session \
   xfce4-settings \
-  xfce4-terminal \
+
+# sysadmin tools {{{1
+
+sudo pacman -Sy \
+  htop \
+  rsync \
+  bzip2 \
+  inetutils \
+  iputils \
+  rsync \
+
+# others {{{1
+
+sudo pacman -Sy \
+  bc \
+  broot  \
+  cifs-utils \
+  darktable \
+  ffmpeg \
+  inkscape \
+  irssi \
+  jq \
+  neovim \
+  restic \
+  ripgrep \
+  rofi \
+  thunar \
+  thunar-archive-plugin \
+  thunar-volman \
+  tmux \
+  tree \
+  wget \
   zola \
-  zsh \
+
+# yay {{{1
 
 # TODO: build yay from git repository and install:
 #   google-chrome

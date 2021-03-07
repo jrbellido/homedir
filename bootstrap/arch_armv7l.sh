@@ -1,0 +1,5 @@
+broot
+vim
+neovim
+zsh
+

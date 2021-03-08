@@ -141,26 +141,26 @@ bindsym $sup+Next workspace next
 # switch to workspace
 bindsym $sup+1 workspace $ws1
 bindsym $sup+2 workspace $ws2
-bindsym $sup+3 workspace number $ws3
-bindsym $sup+4 workspace number $ws4
-bindsym $sup+5 workspace number $ws5
-bindsym $sup+6 workspace number $ws6
-bindsym $sup+7 workspace number $ws7
-bindsym $sup+8 workspace number $ws8
-bindsym $sup+9 workspace number $ws9
-bindsym $sup+0 workspace number $ws10
+bindsym $sup+3 workspace $ws3
+bindsym $sup+4 workspace $ws4
+bindsym $sup+5 workspace $ws5
+bindsym $sup+6 workspace $ws6
+bindsym $sup+7 workspace $ws7
+bindsym $sup+8 workspace $ws8
+bindsym $sup+9 workspace $ws9
+bindsym $sup+0 workspace $ws10
 
 # move focused container to workspace
 bindsym $sup+Shift+1 move container to workspace $ws1
 bindsym $sup+Shift+2 move container to workspace $ws2
-bindsym $sup+Shift+3 move container to workspace number $ws3
-bindsym $sup+Shift+4 move container to workspace number $ws4
-bindsym $sup+Shift+5 move container to workspace number $ws5
-bindsym $sup+Shift+6 move container to workspace number $ws6
-bindsym $sup+Shift+7 move container to workspace number $ws7
-bindsym $sup+Shift+8 move container to workspace number $ws8
-bindsym $sup+Shift+9 move container to workspace number $ws9
-bindsym $sup+Shift+0 move container to workspace number $ws10
+bindsym $sup+Shift+3 move container to workspace $ws3
+bindsym $sup+Shift+4 move container to workspace $ws4
+bindsym $sup+Shift+5 move container to workspace $ws5
+bindsym $sup+Shift+6 move container to workspace $ws6
+bindsym $sup+Shift+7 move container to workspace $ws7
+bindsym $sup+Shift+8 move container to workspace $ws8
+bindsym $sup+Shift+9 move container to workspace $ws9
+bindsym $sup+Shift+0 move container to workspace $ws10
 
 # reload the configuration file
 bindsym $sup+Shift+c reload

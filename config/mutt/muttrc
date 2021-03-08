@@ -17,3 +17,5 @@ bind index G imap-fetch-mail
 set editor = "nvim"
 set charset = "utf-8"
 set record = ''
+
+source "gpg2 -dq ~/.mutt-gmail.gpg |"

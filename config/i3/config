@@ -129,10 +129,10 @@ set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-set $ws10 "10"
+set $ws10 "10: mx"
 
 # assignments
-assign [class="^firefox$"] → number "2: web"
+assign [class="^firefox$"] → $ws2 
 
 # move between workspaces
 bindsym $sup+Prior workspace prev

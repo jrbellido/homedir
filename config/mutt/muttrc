@@ -1,0 +1,53 @@
+# general
+set realname = "Joan R. Bellido"
+set from = "jrbellido@gmail.com"
+set use_from = yes
+set envelope_from = yes
+set mail_check=60
+
+# sorting/collapsing
+set sort="threads"
+set strict_threads="yes"
+set collapse_unread="no"
+set sort_browser="reverse-date"
+set sort_aux="reverse-last-date-received"
+bind index - collapse-thread
+bind index _ collapse-all
+
+# G to get mail
+bind index G imap-fetch-mail
+
+set editor = "nvim"
+set charset = "utf-8"
+set record = ''
+
+auto_view text/html
+alternative_order text/plain text/enriched text/html
+bind attach <return> view-mailcap
+
+macro index A '<change-folder>!Archive<tab><enter>'
+macro index O '<change-folder>!Sent<tab><enter>'
+macro index I '<change-folder>!<enter>'
+macro index S ';<save-message>!Archive<tab><enter><enter>'
+macro index ! ';<save-message>!Junk<tab><enter><enter>'
+
+# make deletion non-permanent
+macro index d 's!Trash<enter><enter>' "Move message to trash"
+macro pager d 's!Trash<enter><enter>' "Move message to trash"
+
+# and expunge explicit
+macro index x '<delete-message>' "Delete message permanently"
+macro pager x '<delete-message>' "Delete message permanently"
+
+
+## Template for account configuration:
+
+# set smtp_url = "smtps://jrbellido@smtp.gmail.com:465/"
+# set smtp_pass = ""
+# set imap_user = "jrbellido@gmail.com"
+# set imap_pass = ""
+# set folder = "imaps://imap.gmail.com:993"
+# set spoolfile = "+INBOX"
+# set ssl_force_tls = yes
+
+source "gpg2 -dq ~/.gmail-mutt.gpg |"

@@ -45,9 +45,8 @@ set foldmethod=marker
 " vim-wiki {{{1
 let g:vimwiki_list = [{'path': '~/notes', 'syntax': 'markdown', 'ext': '.md'}]
 
-" vim-notes {{{1
-""let g:notes_directories = ['~/Dropbox/Notes']
-""let g:notes_suffix = '.md'
+" Note taking {{{1
+nnoremap <leader>sn :w<CR>:silent exec '!sync-notes'<CR>
 
 " Syntax highlighting {{{1
 filetype plugin indent on

@@ -150,17 +150,6 @@ if has("autocmd")
   " Treat .rss files as XML
   autocmd BufNewFile,BufRead *.rss setfiletype xml
 
-  " vim-racer
-  let g:racer_cmd = '/Users/jr/.cargo/bin/racer'
-  augroup Racer
-    autocmd!
-    autocmd FileType rust nmap <buffer> gd         <Plug>(rust-def)
-    autocmd FileType rust nmap <buffer> gs         <Plug>(rust-def-split)
-    autocmd FileType rust nmap <buffer> gx         <Plug>(rust-def-vertical)
-    autocmd FileType rust nmap <buffer> gt         <Plug>(rust-def-tab)
-    autocmd FileType rust nmap <buffer> <leader>gd <Plug>(rust-doc)
-  augroup END
-
 endif
 
 if has("vim")
@@ -186,3 +175,10 @@ highlight NonText guifg=#222222 ctermfg=darkgrey
 highlight SpecialKey guifg=#222222 ctermfg=darkgrey
 highlight ExtraWhitespace guifg=#222222 ctermfg=darkgrey
 
+" CoC {{{1
+call coc#add_extension('coc-rust-analyzer',)
+
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)

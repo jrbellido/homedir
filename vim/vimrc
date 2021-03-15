@@ -18,6 +18,11 @@ call plug#begin()
   Plug 'cespare/vim-toml'
   Plug 'stephpy/vim-yaml'
   Plug 'ziglang/zig.vim'
+  Plug 'evprkr/galaxian-vim'
+  Plug 'matsuuu/pinkmare', { 'branch': 'main' }
+  Plug 'lighthaus-theme/vim-lighthaus'
+  Plug 'embark-theme/vim', { 'as': 'embark', 'branch': 'main' }
+  Plug 'kkga/vim-envy'
 
   " --- colorschemes ---
   Plug 'pgavlin/pulumi.vim'

@@ -231,7 +231,7 @@ bar {
   status_command i3status
   strip_workspace_numbers no
   strip_workspace_name no
-  position bottom
+  position top 
   colors {
     background #000000
     statusline #FFFFFF

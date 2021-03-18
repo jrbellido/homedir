@@ -10,9 +10,9 @@ fi
 
 PROMPT='%n@%m:%~$(git_prompt_info)$ '
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}[%{$fg[cyan]%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$FG[240]%}[%{$FG[245]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[green]%}%{$fg[yellow]%}*%{$reset_color%}%{$fg[green]%}]%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}]"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$FG[240]%}%{$FG[255]%}*%{$reset_color%}%{$FG[240]%}]%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$FG[240]%}]"
 
 alias tmux="tmux -2"

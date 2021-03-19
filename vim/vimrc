@@ -99,11 +99,6 @@ nmap <tab><tab> <C-w>w
 " Replace all alias
 nnoremap S :%s//g<Left><Left>
 
-nnoremap <leader>f :find *
-nnoremap <leader>s :sfind *
-nnoremap <leader>t :tabfind *
-nnoremap <leader>v :vert sfind *
-
 " Reload vimrc
 nnoremap <leader>r :source ~/.vimrc<CR>
 

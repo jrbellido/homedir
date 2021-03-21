@@ -3,7 +3,6 @@
 " Plugins {{{1
 call plug#begin()
   Plug 'ervandew/supertab'
-  Plug 'https://tpope.io/vim/fugitive.git'
   Plug 'jelera/vim-javascript-syntax'
   Plug 'mattn/emmet-vim'
   Plug 'scrooloose/nerdcommenter'
@@ -18,16 +17,20 @@ call plug#begin()
   Plug 'cespare/vim-toml'
   Plug 'stephpy/vim-yaml'
   Plug 'ziglang/zig.vim'
-  Plug 'evprkr/galaxian-vim'
-  Plug 'matsuuu/pinkmare', { 'branch': 'main' }
-  Plug 'lighthaus-theme/vim-lighthaus'
-  Plug 'embark-theme/vim', { 'as': 'embark', 'branch': 'main' }
-  Plug 'kkga/vim-envy'
+
+  " --- git ---
+  Plug 'mhinz/vim-signify'
+  Plug 'tpope/vim-fugitive'
 
   " --- colorschemes ---
   Plug 'pgavlin/pulumi.vim'
   Plug 'arzg/vim-colors-xcode'
   Plug 'wadackel/vim-dogrun'
+  Plug 'evprkr/galaxian-vim'
+  Plug 'matsuuu/pinkmare', { 'branch': 'main' }
+  Plug 'lighthaus-theme/vim-lighthaus'
+  Plug 'embark-theme/vim', { 'as': 'embark', 'branch': 'main' }
+  Plug 'kkga/vim-envy'
   Plug 'stillwwater/vim-nebula'
 call plug#end()
 
@@ -160,9 +163,6 @@ if has("autocmd")
   autocmd FileType html inoremap ;p <p></p><Space><++><Esc>FpT>i
 endif
 
-" CtrlP 
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$|dist/.*'
-
 " Key mapping {{{1
 set path=..,**
 
@@ -182,3 +182,13 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+" vim-signify {{{1
+
+let g:signify_sign_show_count = 0
+let g:signify_sign_show_text = 1
+
+nmap <leader>gj <plug>(signify-next-hunk)
+nmap <leader>gk <plug>(signify-prev-hunk)
+nmap <leader>gJ 9999<leader>gJ
+nmap <leader>gK 9999<leader>gK

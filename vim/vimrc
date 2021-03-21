@@ -183,7 +183,7 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" vim-signify {{{1
+" Git plugins {{{1
 
 let g:signify_sign_show_count = 0
 let g:signify_sign_show_text = 1

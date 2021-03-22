@@ -26,7 +26,6 @@
   ui = always
 [advice]
 	statusHints = false
-[diff]
 [branch]
 	autosetupmerge = true
 [push]
@@ -36,3 +35,13 @@
   tool = nvim -d
 [pull]
 	rebase = false
+[merge]
+  tool = vimdiff
+[mergetool]
+  prompt = true
+[mergetool "vimdiff"]
+  cmd = nvim -d $LOCAL $REMOTE $MERGED
+[difftool]
+  prompt = false
+[diff]
+  tool = vimdiff

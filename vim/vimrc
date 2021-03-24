@@ -18,6 +18,9 @@ call plug#begin()
   Plug 'stephpy/vim-yaml'
   Plug 'ziglang/zig.vim'
 
+  " --- rust ---
+  Plug 'rust-lang/rust.vim'
+
   " --- git ---
   Plug 'mhinz/vim-signify'
   Plug 'tpope/vim-fugitive'
@@ -59,7 +62,7 @@ nnoremap <leader>sn :w<CR>:silent exec '!sync-notes'<CR>
 " Syntax highlighting {{{1
 filetype plugin indent on
 filetype plugin on
-syntax on
+syntax enable
 
 " Show current line and filename {{{1
 set modeline
@@ -173,10 +176,31 @@ highlight ExtraWhitespace guifg=#222222 ctermfg=darkgrey
 " CoC {{{1
 call coc#add_extension('coc-rust-analyzer',)
 
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
+
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+nmap <leader>rn <Plug>(coc-rename)
+
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+
+xmap <silent> <C-s> <Plug>(coc-range-select)
+nmap <silent> <C-s> <Plug>(coc-range-select)
 
 " Git plugins {{{1
 
@@ -187,3 +211,6 @@ nmap <leader>gj <plug>(signify-next-hunk)
 nmap <leader>gk <plug>(signify-prev-hunk)
 nmap <leader>gJ 9999<leader>gJ
 nmap <leader>gK 9999<leader>gK
+
+" rust.vim {{{1
+let g:rustfmt_autosave = 1

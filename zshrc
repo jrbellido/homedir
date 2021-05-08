@@ -1,3 +1,9 @@
+export UPDATE_ZSH_DAYS=30
+
+COMPLETION_WAITING_DOTS="true"
+
+ZSH_THEME="minimal"
+
 export PATH=$HOME/.homedir/bin:$PATH
 
 if [ -x "/usr/bin/nvim" ] ; then

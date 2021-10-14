@@ -22,3 +22,4 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$FG[240]%}%{$FG[255]%}*%{$reset_color%}%{$FG[240]%
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$FG[240]%}]"
 
 alias tmux="tmux -2"
+alias kp="kopia"

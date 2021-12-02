@@ -29,7 +29,6 @@ call plug#begin()
   Plug 'pgavlin/pulumi.vim'
   Plug 'arzg/vim-colors-xcode'
   Plug 'wadackel/vim-dogrun'
-  Plug 'evprkr/galaxian-vim'
   Plug 'matsuuu/pinkmare', { 'branch': 'main' }
   Plug 'lighthaus-theme/vim-lighthaus'
   Plug 'embark-theme/vim', { 'as': 'embark', 'branch': 'main' }

@@ -36,6 +36,11 @@ font pango:Hack 9
 # Power management
 #exec --no-startup-id xfce4-power-manager
 
+# Apps
+assign [class="google-chrome-stable"] $ws2
+assign [class="teams"] $ws3
+assign [class="slack"] $ws4
+
 # Dropbox
 exec --no-startup-id $HOME/.dropbox-dist/dropboxd
 
@@ -45,6 +50,9 @@ exec --no-startup-id nitrogen --set-zoom-fill --random ~/.config/wallpapers
 # Clipboard management 
 exec --no-startup-id parcellite
 #bindsym $sup+Shift+v exec xfce4-popup-clipman
+
+# Screenshot
+exec --no-startup-id shutter --min_at_startup
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status

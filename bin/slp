@@ -1,0 +1,3 @@
+#!/bin/sh
+
+sudo s2ram --force

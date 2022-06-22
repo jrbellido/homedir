@@ -6,24 +6,38 @@ call plug#begin()
   Plug 'jelera/vim-javascript-syntax'
   Plug 'mattn/emmet-vim'
   Plug 'scrooloose/nerdcommenter'
+  Plug 'preservim/nerdtree'
   Plug 'terryma/vim-expand-region'
   Plug 'vim-syntastic/syntastic'
-  Plug 'vimwiki/vimwiki'
   Plug 'tpope/vim-surround'
-  Plug 'posva/vim-vue'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'cespare/vim-toml'
   Plug 'stephpy/vim-yaml'
-  Plug 'ziglang/zig.vim'
+  Plug 'wincent/command-t'
+  "  Plug 'vimwiki/vimwiki'
+  "  Plug 'posva/vim-vue'
+
+  " --- buffer ---
+  " Plug 'fholgado/minibufexpl.vim'
+
+  " --- formatting ---
+  Plug 'prettier/vim-prettier'
 
   " --- rust ---
   Plug 'rust-lang/rust.vim'
 
+  " --- zig ---
+  Plug 'ziglang/zig.vim'
+
   " --- git ---
   Plug 'mhinz/vim-signify'
   Plug 'tpope/vim-fugitive'
+  Plug 'airblade/vim-gitgutter'
+
+  " --- system ---
+  Plug 'qpkorr/vim-renamer'
 
   " --- colorschemes ---
   Plug 'pgavlin/pulumi.vim'
@@ -34,6 +48,21 @@ call plug#begin()
   Plug 'embark-theme/vim', { 'as': 'embark', 'branch': 'main' }
   Plug 'kkga/vim-envy'
   Plug 'stillwwater/vim-nebula'
+  Plug 'wojciechkepka/vim-github-dark'
+  Plug 'nocksock/bloop-vim'
+  Plug 'AhmedAbdulrahman/vim-aylin'
+  Plug 'tjammer/blayu.vim'
+  Plug 'dikiaap/minimalist'
+  Plug 'tssm/fairyfloss.vim'
+  Plug 'jlobos/camila'
+  Plug 'lmintmate/blue-mood-vim'
+  Plug 'thenewvu/vim-colors-blueprint'
+  Plug 'Zabanaa/neuromancer.vim'
+  Plug 'ldelossa/vimdark'
+  Plug 'jaredgorski/fogbell.vim'
+  Plug 'EdenEast/nightfox.nvim'
+  Plug 'arcticicestudio/nord-vim'
+  Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 call plug#end()
 
 let mapleader = ","
@@ -86,6 +115,7 @@ set smartcase                   " ... unless they contain at least one capital l
 
 " launch incremental search using ripgrep
 nmap <c-p> :Rg<CR>
+nmap <c-l> :GFiles<CR>
 
 " Others  {{{1
 set autoread
@@ -100,6 +130,9 @@ let g:netrw_banner = 0
 " Key bindings {{{1
 " Move between windows
 nmap <tab><tab> <C-w>w
+
+" Prettier
+nnoremap gp :silent %!prettier --stdin-filepath %<CR>
 
 " Replace all alias
 nnoremap S :%s//g<Left><Left>
@@ -133,6 +166,12 @@ vnoremap § :m '<-2<CR>gv=gv
 :nnoremap <F5> "=strftime("%Y/%m/%d")<CR>P
 :inoremap <F5> <C-R>=strftime("%Y/%m/%d")<CR>
 
+" NERDTree
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+let g:NERDTreeWinSize=42
 
 " Filetype specific options {{{1
 if has("autocmd")
@@ -164,7 +203,7 @@ endif
 set path=..,**
 
 " Pretty colors {{{1
-colorscheme nebula 
+colorscheme minimalist
 
 " Invisible characters {{{1
 set listchars=tab:▸\ ,eol:¬,space:.
@@ -184,7 +223,9 @@ endif
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
+nmap <silent> ga <Plug>(coc-fix-current)
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)

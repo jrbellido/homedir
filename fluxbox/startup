@@ -1,0 +1,22 @@
+#!/bin/sh
+#
+# fluxbox startup-script:
+
+fluxbox &
+fbpid=$!
+
+sleep 5
+{
+  nitrogen --set-zoom-fill --random ~/.config/wallpapers &
+  parcellite &
+  dropbox start &
+  shutter &
+  volumeicon &
+  shutter --min_at_startup &
+  gkrellm -w &
+} &
+
+wait $fbpid
+
+# or if you want to keep a log:
+# exec fluxbox -log "/root/.fluxbox/log"

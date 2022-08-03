@@ -2,10 +2,13 @@
 
 Mod4 d :Exec rofi -show combi -combi window,drun,ssh -show-icons
 Mod4 c :Exec rofi -show calc -modi calc -no-show-match -no-sort > /dev/null
-Mod4 x :Exec alacritty
+Mod4 Return :Exec alacritty
 Mod4 r :Reconfigure
 Mod4 Shift r :Restart
 
+# move between workspaces
+Mod4 Prior :PrevWorkspace
+Mod4 Next :NextWorkspace
 
 # click on the desktop to get menus
 OnDesktop Mouse1 :HideMenus
@@ -51,27 +54,6 @@ OnTitlebar Mouse3 :WindowMenu
 Mod1 Tab :NextWindow {groups} (workspace=[current])
 Mod1 Shift Tab :PrevWindow {groups} (workspace=[current])
 
-# cycle through tabs in the current window
-Mod4 Tab :NextTab
-Mod4 Shift Tab :PrevTab
-
-# go to a specific tab in the current window
-Mod4 1 :Tab 1
-Mod4 2 :Tab 2
-Mod4 3 :Tab 3
-Mod4 4 :Tab 4
-Mod4 5 :Tab 5
-Mod4 6 :Tab 6
-Mod4 7 :Tab 7
-Mod4 8 :Tab 8
-Mod4 9 :Tab 9
-
-# open a terminal
-Mod1 F1 :Exec xterm
-
-# open a dialog to run programs
-Mod1 F2 :Exec fbrun
-
 # volume settings, using common keycodes
 # if these don't work, use xev to find out your real keycodes
 176 :Exec amixer sset Master,0 1+
@@ -90,10 +72,6 @@ Mod1 space :WindowMenu
 
 # exit fluxbox
 Control Mod1 Delete :Exit
-
-# change to previous/next workspace
-Control Mod1 Left :PrevWorkspace
-Control Mod1 Right :NextWorkspace
 
 # send the current window to previous/next workspace
 Mod4 Left :SendToPrevWorkspace

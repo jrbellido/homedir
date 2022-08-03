@@ -29,3 +29,6 @@ Link to tmux configuration:
 
     $ ln -s ~/.homedir/tmux.conf ~/.tmux.conf
 
+Link to fluxbox configuration:
+
+    $ ln -s ~/.homedir/fluxbox ~/.fluxbox

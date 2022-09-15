@@ -131,11 +131,20 @@ let g:netrw_banner = 0
 " Move between windows
 nmap <tab><tab> <C-w>w
 
+" Hide highlighting
+nnoremap <leader>h :noh<CR>
+
+" GitGutter
+nnoremap <leader>dd :GitGutterDiffOrig<CR>
+
 " Prettier
 nnoremap gp :silent %!prettier --stdin-filepath %<CR>
 
 " Replace all alias
 nnoremap S :%s//g<Left><Left>
+
+" Replace selected text
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
 " Reload vimrc
 nnoremap <leader>r :source ~/.vimrc<CR>
@@ -163,8 +172,8 @@ vnoremap ¶ :m '>+1<CR>gv=gv
 vnoremap § :m '<-2<CR>gv=gv
 
 " Insert date
-:nnoremap <F5> "=strftime("%Y/%m/%d")<CR>P
-:inoremap <F5> <C-R>=strftime("%Y/%m/%d")<CR>
+nnoremap <F5> "=strftime("%Y/%m/%d")<CR>P
+inoremap <F5> <C-R>=strftime("%Y/%m/%d")<CR>
 
 " NERDTree
 nnoremap <leader>n :NERDTreeFocus<CR>
@@ -172,6 +181,7 @@ nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 let g:NERDTreeWinSize=42
+
 
 " Filetype specific options {{{1
 if has("autocmd")

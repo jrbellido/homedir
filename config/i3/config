@@ -40,7 +40,7 @@ font pango:Hack 9
 #exec --no-startup-id xfce4-power-manager
 
 # Dropbox
-exec --no-startup-id dropxbox start
+exec --no-startup-id dropbox start
 
 # Wallpaper
 exec --no-startup-id nitrogen --set-zoom-fill --random ~/.config/wallpapers

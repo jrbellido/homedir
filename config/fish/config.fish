@@ -5,3 +5,9 @@ if status is-interactive
     fundle plugin 'edc/bass'
     fundle init
 end
+
+set -px --path PATH ~/.homedir/bin
+
+# bun 
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH

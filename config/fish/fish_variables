@@ -30,4 +30,6 @@ SETUVAR fish_pager_color_completion:normal
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
-SETUVAR fish_user_paths:/home/jr/\x2ehomedir/bin/
+SETUVAR fish_user_paths:/etc/java\x2dconfig\x2d2/current\x2dsystem\x2dvm/bin\x1e/opt/openjdk\x2dbin\x2d11\x2e0\x2e13_p8/bin\x1e/home/jr/\x2elocal/bin\x1e/home/jr/\x2ehomedir/bin/\x1e/home/jr/\x2ecargo/bin
+SETUVAR --export BUN_INSTALL:/home/jr/\x2ebun
+SETUVAR --export JAVA_HOME:/opt/openjdk\x2dbin\x2d11

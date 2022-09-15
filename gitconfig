@@ -45,3 +45,7 @@
   prompt = false
 [diff]
   tool = vimdiff
+[cola]
+	spellcheck = false
+	theme = flat-dark-blue
+	icontheme = dark

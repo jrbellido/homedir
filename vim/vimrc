@@ -16,6 +16,7 @@ call plug#begin()
   Plug 'cespare/vim-toml'
   Plug 'stephpy/vim-yaml'
   Plug 'wincent/command-t'
+  Plug 'honza/vim-snippets'
   "  Plug 'vimwiki/vimwiki'
   "  Plug 'posva/vim-vue'
 

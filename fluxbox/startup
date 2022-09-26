@@ -7,14 +7,19 @@ fbpid=$!
 
 sleep 2
 {
-  xcompmgr -c &
+  # transparency
+  #xcompmgr -c &
+ 
+  # wallpaper
+  chwp &
+
+  # others
   alttab &
-  nitrogen --set-zoom-fill --random ~/.config/wallpapers &
   parcellite &
   dropbox start &
-  shutter &
+  # shutter &
   volumeicon &
-  shutter --min_at_startup &
+  # shutter --min_at_startup &
   # gkrellm -w &
 } &
 

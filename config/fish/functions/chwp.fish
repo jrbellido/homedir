@@ -25,9 +25,9 @@ function chwp
   #source $script_file
   #command rm $script_file
   
-  #nitrogen --set-zoom-fill --random ~/.config/wallpapers/space
+  nitrogen --set-zoom-fill --random ~/.config/wallpapers/space
   #nitrogen --set-tiled --random ~/.config/wallpapers/patterns
-  nitrogen --set-zoom-fill --random ~/.config/wallpapers/fs_patterns
+  #nitrogen --set-zoom-fill --random ~/.config/wallpapers/fs_patterns
 end
 
 function __chwp_usage

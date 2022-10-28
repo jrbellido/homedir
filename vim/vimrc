@@ -233,25 +233,31 @@ endif
 
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
-command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+command! -nargs=0 OR       :call CocAction('runCommand', 'editor.action.organizeImport')
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
-nmap <silent> ga <Plug>(coc-fix-current)
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+" Actions on save file
+if has('autocmd')
+  autocmd BufWritePre *.ts :OR
+  autocmd BufWritePre *.ts :Prettier
+endif
 
-nmap <leader>rn <Plug>(coc-rename)
+nmap <silent> ga     <Plug>(coc-fix-current)
+nmap <silent> gd     <Plug>(coc-definition)
+nmap <silent> gy     <Plug>(coc-type-definition)
+nmap <silent> gi     <Plug>(coc-implementation)
+nmap <silent> gr     <Plug>(coc-references)
 
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nmap <leader>rn      <Plug>(coc-rename)
 
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+nmap <silent> [g     <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g     <Plug>(coc-diagnostic-next)
 
-xmap <silent> <C-s> <Plug>(coc-range-select)
-nmap <silent> <C-s> <Plug>(coc-range-select)
+xmap <leader>f       <Plug>(coc-format-selected)
+nmap <leader>f       <Plug>(coc-format-selected)
+
+xmap <silent> <C-s>  <Plug>(coc-range-select)
+nmap <silent> <C-s>  <Plug>(coc-range-select)
 
 " Git plugins {{{1
 

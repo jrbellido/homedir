@@ -6,5 +6,8 @@
   [Workspace]	{2}
 [end]
 [app] (name=microsoft teams - preview) (class=Microsoft Teams - Preview) (role=browser-window)
+  [Workspace]	{3}
+[end]
+[app] (name=google-chrome) (class=Google-chrome) (role=browser)
   [Workspace]	{1}
 [end]
